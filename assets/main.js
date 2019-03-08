@@ -115,4 +115,3 @@ function startLoading() {
   generateRandomAdd();
   generateRandomSub();
 }
-window.onload = startLoading;
