@@ -262,10 +262,25 @@
       </div>
     </div>
   </div>
-  <div id="hangMan" class="tabcontent">
-    <h3 class="tc f3 green">This will be where Hangman Goes</h3>
-    <p class="tc">Lets play a game of Hang man!!</p>
-    <img src="assets/img/hangman.png" class="ctr mv5">
+  <div id="hangMan" class="tabcontent tc">
+    <div class="hangman">
+      <h1 class="f1">Hangman</h1>
+       <h2 class="f2">Using words from word list #24, for the week of 02/11/2019</h2>
+       <h3 class="f3">Use the alphabet below to guess the word </h3>
+   </div>
+   <div class="hangman">
+       <div id="buttons" class="f2">
+       </div>  
+       <p id="catagoryName"></p>
+       <div id="hold">
+       </div>
+       <p id="mylives"></p>
+       <p id="clue">Clue -</p>  
+        <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+       <div class="container">
+         <button id="reset">Play again</button>
+       </div>
+   </div>
   </div>
   <div id="wordSearch" class="tabcontent">
     <h3 class="tc f3 orange">This is where a Word Search game will go</h3>

@@ -39,7 +39,6 @@ window.onload = function() {
 
   // Get elements
   var showLives = document.getElementById("mylives");
-  var showCatagory = document.getElementById("scatagory");
   var showClue = document.getElementById("clue");
 
   // create alphabet ul
@@ -188,7 +187,7 @@ window.onload = function() {
   check = function() {
     list.onclick = function() {
       var guess = this.innerHTML;
-      this.setAttribute("class", "active");
+      this.setAttribute("class", "activeselect");
       this.onclick = null;
       for (var i = 0; i < word.length; i++) {
         if (word[i] === guess) {
