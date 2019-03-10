@@ -38,19 +38,19 @@
         <i class="fas fa-list orange"></i></a>
     </nav>
   </header>
-  <div class="black-80 tc pt6 pb4 avenir">
+  <div class="black tc pt6 pb4 avenir">
     <h1 class="mt2 mb0 baskerville fw1 f1">Vocabulary</h1>
-  <h2 class="mt2 mb0 f6 fw4 tracked">Choose to see previous words or play a GAME!!</h2>
+  <h2 id="vocab-sub-title" class="mt2 mb0 f6 fw4 tracked">Lets study our words or <span class="red">PLAY a GAME!!</span></h2>
   <nav class="tab bt bb tc mw6 center mt4">
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph3-l" id="defaultOpen" onclick="openName(event, 'Home')">Home</a>
+    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph3-l" id="defaultOpen" onclick="openName(event, 'Home')">Home</a>
     <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph3-l" onclick="openName(event, 'History')">History</a>
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph3-l" onclick="openName(event, 'hangMan')">Hang Man</a>
+    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph3-l" onclick="openName(event, 'hangMan')">Hangman</a>
     <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph3-l" onclick="openName(event, 'wordSearch')">Word Search</a>
     </nav>
   </div>
   <div id="Home" class="tabcontent">
-    <h1 class="f1 tc">Word Lists</h1>
-    <h2 class="f2 tc">Vocabulary words for this week: "Prefixes - 're-', 'un-'</h2>
+    <h1 class="f1 tc orange">Word Lists</h1>
+    <h2 class="f2 tc green">Vocabulary words for this week: "Prefixes - 're-', 'un-'</h2>
     <p class="f7 tc red">* High Frequency Words</p>
     <div class="pa4">
       <div class="overflow-auto">
@@ -104,7 +104,7 @@
     </div>
     <div class="pa4">
       <div class="overflow-auto">
-        <h2 class="f2 pb2 tc">Vocabulary words for next week: Words with 'aw', 'al', 'o'</h2>
+        <h2 class="f2 pb2 tc green">Vocabulary words for next week: Words with 'aw', 'al', 'o'</h2>
         <p class="f7 red tc pb4">* High Frequency Words</p>
         <table class="f6 w-100 mw8 center tc" cellspacing="0">
           <tbody class="lh-copy">
@@ -156,8 +156,8 @@
     </div>
   </div>
   <div id="History" class="tabcontent">
-    <h1 class="f1 tc">Word Lists</h1>
-    <h2 class="f2 tc">Previous weeks words: "Homophones"</h2>
+    <h1 class="f1 tc orange">Word Lists</h1>
+    <h2 class="f2 tc green">Previous weeks words: "Homophones"</h2>
     <p class="f7 tc red">* High Frequency Words</p>
     <div class="pa4">
       <div class="overflow-auto">
@@ -211,7 +211,7 @@
     </div>
     <div class="pa4">
       <div class="overflow-auto">
-        <h2 class="f2 pb2 tc">Previous weeks words: Suffixes -y, -ly, -ful</h2>
+        <h2 class="f2 pb2 tc green">Previous weeks words: Suffixes -y, -ly, -ful</h2>
         <p class="f7 red tc pb4">* High Frequency Words</p>
         <table class="f6 w-100 mw8 center tc" cellspacing="0">
           <tbody class="lh-copy">
@@ -264,9 +264,9 @@
   </div>
   <div id="hangMan" class="tabcontent tc">
     <div class="hangman">
-      <h1 class="f1">Hangman</h1>
-       <h2 class="f2">Using words from word list #24, for the week of 02/11/2019</h2>
-       <h3 class="f3">Use the alphabet below to guess the word </h3>
+      <h1 class="f1 orange">Hangman</h1>
+       <h2 class="f2 green">Using words from word list #24, for the week of 02/11/2019</h2>
+       <h3 class="f3 blue">Use the alphabet below to guess the word </h3>
    </div>
    <div class="hangman">
        <div id="buttons" class="f2">

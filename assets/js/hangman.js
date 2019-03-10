@@ -93,12 +93,15 @@ window.onload = function() {
   // Show lives
   comments = function() {
     showLives.innerHTML = "You have " + lives + " lives";
+    document.getElementById("mylives").style.color = "black";
     if (lives < 1) {
-      showLives.innerHTML = "Game Over";
+      showLives.innerHTML = "Game Over!";
+      document.getElementById("mylives").style.color = "red";
     }
     for (var i = 0; i < guesses.length; i++) {
       if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
+        document.getElementById("mylives").style.color = "green";
       }
     }
   };
