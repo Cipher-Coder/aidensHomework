@@ -103,3 +103,9 @@ body {
 .tab a.active {
   background-color: #ccc;
 }
+
+.ctr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
