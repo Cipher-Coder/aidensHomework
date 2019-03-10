@@ -39,8 +39,6 @@ window.onload = function() {
 
   // Get elements
   var showLives = document.getElementById("mylives");
-  var showClue = document.getElementById("clue");
-
   // create alphabet ul
   var buttons = function() {
     myButtons = document.getElementById("buttons");
@@ -266,7 +264,6 @@ window.onload = function() {
   document.getElementById("reset").onclick = function() {
     correct.parentNode.removeChild(correct);
     letters.parentNode.removeChild(letters);
-    showClue.innerHTML = "";
     context.clearRect(0, 0, 400, 400);
     play();
   };
