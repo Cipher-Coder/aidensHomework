@@ -84,3 +84,22 @@ body {
 #userAnswer {
   font-size: large;
 }
+
+.tabcontent {
+  display: none;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+.tab a {
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  border: none;
+}
+
+.tab a.active {
+  background-color: #ccc;
+}
