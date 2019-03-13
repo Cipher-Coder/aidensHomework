@@ -58,8 +58,7 @@ window.onload = function() {
   // Select Category
   var selectCat = function() {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML =
-        "From the 'Prefixes' list, including re-, and un-";
+      catagoryName.innerHTML = "From the 'TNReady' list";
     } else if (chosenCategory === categories[1]) {
       catagoryName.innerHTML =
         "From the 'Prefixes' list, including re-, and un-";
@@ -211,13 +210,16 @@ window.onload = function() {
   play = function() {
     categories = [
       [
-        "unhappy",
-        "retell",
-        "untangle",
-        "unkind",
-        "repaint",
-        "refill",
-        "unlike"
+        "passage",
+        "opinion",
+        "difference",
+        "addition",
+        "repeated",
+        "pentagon",
+        "hexagon",
+        "sounds",
+        "repeated",
+        "total"
       ],
       [
         "remake",
@@ -227,8 +229,7 @@ window.onload = function() {
         "replay",
         "read",
         "happy",
-        "rewrite",
-        "overheard"
+        "rewrite"
       ],
       [
         "away",
@@ -238,9 +239,7 @@ window.onload = function() {
         "earth",
         "here",
         "learning",
-        "surprised",
-        "there",
-        "without"
+        "surprised"
       ]
     ];
 
