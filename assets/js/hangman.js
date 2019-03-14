@@ -89,13 +89,13 @@ window.onload = function() {
     }
   };
 
-  // Show lives
-  // let count2 = document.getElementById("ttl-right");
-  // let numRight = 0;
-  // function trackCorrect() {
-  //   ++numRight;
-  //   count2.innerHTML = word.length - numRight;
-  // }
+  //Show lives
+  let count2 = document.getElementById("ttl-right");
+  let numRight = 0;
+  function trackCorrect() {
+    count2.innerHTML = word.length - numRight;
+    numRight++;
+  }
 
   comments = function() {
     showLives.innerHTML = "You have " + lives + " lives";
@@ -108,7 +108,7 @@ window.onload = function() {
       if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
         document.getElementById("mylives").style.color = "green";
-        // trackCorrect();
+        trackCorrect();
       }
     }
   };
@@ -269,14 +269,14 @@ window.onload = function() {
 
   play();
 
-  // Reset
+  // Count how many probs / part of score
   let count1 = document.getElementById("ttlcount");
   let numPlayed = 1;
   function trackScore() {
     ++numPlayed;
     count1.innerHTML = numPlayed;
   }
-
+  // Reset
   document.getElementById("reset").onclick = function() {
     correct.parentNode.removeChild(correct);
     letters.parentNode.removeChild(letters);
