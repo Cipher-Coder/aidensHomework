@@ -90,6 +90,13 @@ window.onload = function() {
   };
 
   // Show lives
+  // let count2 = document.getElementById("ttl-right");
+  // let numRight = 0;
+  // function trackCorrect() {
+  //   ++numRight;
+  //   count2.innerHTML = word.length - numRight;
+  // }
+
   comments = function() {
     showLives.innerHTML = "You have " + lives + " lives";
     document.getElementById("mylives").style.color = "black";
@@ -101,6 +108,7 @@ window.onload = function() {
       if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
         document.getElementById("mylives").style.color = "green";
+        // trackCorrect();
       }
     }
   };
@@ -262,11 +270,18 @@ window.onload = function() {
   play();
 
   // Reset
+  let count1 = document.getElementById("ttlcount");
+  let numPlayed = 1;
+  function trackScore() {
+    ++numPlayed;
+    count1.innerHTML = numPlayed;
+  }
 
   document.getElementById("reset").onclick = function() {
     correct.parentNode.removeChild(correct);
     letters.parentNode.removeChild(letters);
     context.clearRect(0, 0, 400, 400);
     play();
+    trackScore();
   };
 };

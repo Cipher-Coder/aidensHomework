@@ -202,7 +202,7 @@ canvas {
   display: block;
 }
 
-#reset {
+.button-1 {
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -217,7 +217,7 @@ canvas {
   cursor: pointer;
 }
 
-#reset::before {
+.button-1::before {
   content: "";
   position: absolute;
   left: 0;
@@ -229,11 +229,11 @@ canvas {
   transition: transform 0.2s ease-in-out;
 }
 
-#reset:hover::before {
+.button-1:hover::before {
   transform: translateX(0);
 }
 
-#reset span {
+.button-1 span {
   position: relative;
   z-index: 1;
 }
