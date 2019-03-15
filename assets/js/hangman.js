@@ -58,12 +58,11 @@ window.onload = function() {
   // Select Category
   var selectCat = function() {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML = "From the 'TNReady' list";
+      catagoryName.innerHTML = "From the 'TNReady' list for 03/15";
     } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML =
-        "From the 'Prefixes' list, including re-, and un-";
+      catagoryName.innerHTML = "Mix of words from the 03/15 and 03/22 list";
     } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "These are your High Frequency Words";
+      catagoryName.innerHTML = "From the TNReady list for 03/22";
     }
   };
 
@@ -227,21 +226,25 @@ window.onload = function() {
         "total",
         "vowel",
         "altogether",
-        "unlock",
-        "replay",
-        "read",
-        "happy",
-        "rewrite"
+        "digit",
+        "equation",
+        "equal",
+        "rectangle",
+        "nearest",
+        "triangle",
+        "quadrilateral"
       ],
       [
-        "away",
-        "began",
-        "brothers",
-        "brown",
-        "earth",
-        "here",
-        "learning",
-        "surprised"
+        "greatest",
+        "least",
+        "measure",
+        "inch",
+        "centimeter",
+        "value",
+        "square",
+        "graph",
+        "angle",
+        "array"
       ]
     ];
 
