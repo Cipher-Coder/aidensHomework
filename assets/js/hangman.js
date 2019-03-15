@@ -221,13 +221,12 @@ window.onload = function() {
         "pentagon",
         "hexagon",
         "sounds",
-        "repeated",
-        "total"
+        "repeated"
       ],
       [
-        "remake",
-        "unpack",
-        "reread",
+        "total",
+        "vowel",
+        "altogether",
         "unlock",
         "replay",
         "read",
