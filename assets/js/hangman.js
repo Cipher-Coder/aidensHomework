@@ -284,3 +284,9 @@ window.onload = function() {
 };
 
 // Reset the score to 0
+let resetnum = 0;
+let resetnumber = 0;
+function resetScore() {
+  document.getElementById("ttl-right").innerHTML = resetnum;
+  document.getElementById("ttlcount").innerHTML = resetnumber;
+}
