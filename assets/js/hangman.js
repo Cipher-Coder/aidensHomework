@@ -101,8 +101,10 @@ window.onload = function() {
       if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
         document.getElementById("mylives").style.color = "green";
-        numRight = numRight + 1;
       }
+    }
+    if (showLives.innerHTML == "You Win!") {
+      numRight = numRight + 1;
       document.getElementById("ttl-right").innerHTML = numRight;
     }
   };
@@ -268,9 +270,9 @@ window.onload = function() {
 
   // part of score
   let count1 = document.getElementById("ttlcount");
-  let numPlayed = word.length;
+  let numPlayed = 0;
   function trackScore() {
-    numPlayed += word.length;
+    numPlayed = numPlayed + 1;
     count1.innerHTML = numPlayed;
   }
   // Reset
