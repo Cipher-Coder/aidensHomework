@@ -358,3 +358,7 @@ button::-moz-focus-inner {
 #solve.gameSolved {
   opacity: 1;
 }
+
+footer {
+  position: relative;
+}
