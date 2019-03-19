@@ -349,7 +349,14 @@
   <div id="wordSearch" class="tabcontent">
     <h3 class="tc f3 orange">This is where a Word Search game will go</h3>
     <p class="tc">Lets play some word search!!</p>
-    <img src="assets/img/ABCplaceholder.jpg" class="ctr mv5">
+    <div id="puzzle-container" class="mw6 mw8-ns mv4 center pa3 ph3-ns">
+      <div class="puzzleWrap">
+        <div id="puzzle"></div>
+        <div id="words">
+          <button id="solve">Solve Puzzle</button>
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="bg-near-black white-80 pv1 tc ph5">
     <p class="f6"><span class="dib mr4 mr5-ns">©2019 Mattaz Web Design</span>
@@ -358,5 +365,7 @@
   </footer>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/hangman.js"></script>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/wordsearch.js"></script>
 </body>
 </html>
