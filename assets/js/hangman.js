@@ -286,9 +286,9 @@ window.onload = function() {
 };
 
 // Reset the score to 0
-let resetnum = 0;
-let resetnumber = 0;
 function resetScore() {
-  document.getElementById("ttl-right").innerHTML = resetnum;
-  document.getElementById("ttlcount").innerHTML = resetnumber;
+  numRight = 0;
+  numPlayed = 0;
+  document.getElementById("ttl-right").innerHTML = numRight;
+  count1.innerHTML = numPlayed;
 }
