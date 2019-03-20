@@ -302,7 +302,7 @@ button::-moz-focus-inner {
 
 /* indicates that the square is part of a word that has been found */
 #puzzle .found {
-  color: #c4c4c4;
+  color: #f8f4f4;
 }
 
 #puzzle .solved {
@@ -357,6 +357,22 @@ button::-moz-focus-inner {
 #solve:hover,
 #solve.gameSolved {
   opacity: 1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #puzzle {
+    padding: 10px;
+    float: left;
+    margin: 10px 10px;
+  }
+
+  #words {
+    width: 175px;
+  }
+
+  #words li {
+    width: 70px;
+  }
 }
 
 footer {
