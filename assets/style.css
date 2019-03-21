@@ -367,6 +367,7 @@ button::-moz-focus-inner {
   }
 
   #words {
+    display: inline-block;
     width: 175px;
   }
 
