@@ -359,20 +359,16 @@ button::-moz-focus-inner {
   opacity: 1;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   #puzzle {
     padding: 10px;
-    float: left;
+    float: none;
+    text-align: center;
     margin: 10px 10px;
   }
 
   #words {
-    display: inline-block;
-    width: 175px;
-  }
-
-  #words li {
-    width: 70px;
+    text-align: center;
   }
 }
 
