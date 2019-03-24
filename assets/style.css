@@ -370,6 +370,11 @@ button::-moz-focus-inner {
   #words {
     text-align: center;
   }
+
+  #puzzle .puzzleSquare {
+    height: 25px;
+    width: 25px;
+  }
 }
 
 footer {
