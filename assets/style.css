@@ -250,23 +250,18 @@ canvas {
 }
 
 #puzzle-container {
-  display: block;
+  display: flex;
+  flex-direction: row;
   background: #306a8b;
   border-radius: 25px;
   margin-bottom: 200px;
-}
-
-.puzzleWrap {
-  display: inline-block;
-  width: 850px;
-  margin: 50px auto 0;
 }
 
 #puzzle {
   padding: 20px;
   float: left;
   margin: 30px 20px;
-  width: 500px;
+  width: 60%;
 }
 
 #puzzle div {
@@ -357,24 +352,6 @@ button::-moz-focus-inner {
 #solve:hover,
 #solve.gameSolved {
   opacity: 1;
-}
-
-@media only screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  #puzzle {
-    padding: 10px;
-    float: none;
-    text-align: center;
-    margin: 10px 10px;
-  }
-
-  #words {
-    text-align: center;
-  }
-
-  #puzzle .puzzleSquare {
-    height: 25px;
-    width: 25px;
-  }
 }
 
 footer {

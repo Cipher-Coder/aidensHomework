@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-118247855-5', 'auto');
-		ga('send', 'pageview');
-    </script>
-    <meta name="description" content="Kids website to practice spelling, math, vocabulary, and whatever else they may need "/>
-    <meta name="author" content="Mattaz Web Design"/>
-  <link rel="icon" href="favicon.ico"/>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-118247855-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta name="description"
+    content="Kids website to practice spelling, math, vocabulary, and whatever else they may need " />
+  <meta name="author" content="Mattaz Web Design" />
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <title>Aiden's School Work</title>
 </head>
+
 <body>
   <header id="nav" class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
     <nav id="navbar" class="topnav f6 fw6">
       <a class="link dim white dib mr3" href="index.html" title="Home">Home</a>
       <a class="link dim white dib mr3" href="math.html" title="Math">Math Practice</a>
       <a class="link dim orange dib mr3" href="vocabulary.html" title="Vocabulary">Vocabulary</a>
-      <a class="link dim white fr dib" href="https://tpes.monroe.k12.tn.us/" target="_blank">Mrs. Chastain's 2nd Grade</a>
+      <a class="link dim white fr dib" href="https://tpes.monroe.k12.tn.us/" target="_blank">Mrs. Chastain's 2nd
+        Grade</a>
       <a href="javascript:void(0);" class="icon" onclick="sideMenu()">
         <i class="fas fa-list orange"></i></a>
     </nav>
   </header>
   <div class="black tc pt6 pb4 avenir">
     <h1 class="mt2 mb0 baskerville fw1 f1">Vocabulary</h1>
-  <h2 id="vocab-sub-title" class="mt2 mb0 f6 fw4 tracked">Lets study our words or <span class="red">PLAY a GAME!!</span></h2>
-  <nav class="tab bt bb tc mw6 center mt4">
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph3-l" id="defaultOpen" onclick="openName(event, 'Home')">Vocab</a>
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph3-l" onclick="openName(event, 'History')">History</a>
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph3-l" onclick="openName(event, 'hangMan')">Hangman</a>
-    <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph3-l" onclick="openName(event, 'wordSearch')">Word Search</a>
+    <h2 id="vocab-sub-title" class="mt2 mb0 f6 fw4 tracked">Lets study our words or <span class="red">PLAY a
+        GAME!!</span></h2>
+    <nav class="tab bt bb tc mw6 center mt4">
+      <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph3-l" id="defaultOpen"
+        onclick="openName(event, 'Home')">Vocab</a>
+      <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph3-l"
+        onclick="openName(event, 'History')">History</a>
+      <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph3-l"
+        onclick="openName(event, 'hangMan')">Hangman</a>
+      <a class="tablinks f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph3-l"
+        onclick="openName(event, 'wordSearch')">Word Search</a>
     </nav>
   </div>
   <div id="Home" class="tabcontent">
@@ -325,36 +336,34 @@
   <div id="hangMan" class="tabcontent tc">
     <div class="hangman">
       <h1 class="f1 orange">Hangman</h1>
-       <h2 class="f2 green">Using words from word list #24, for the week of 02/11/2019</h2>
-       <h3 class="f3 blue">Use the alphabet below to guess the word </h3>
-       <h2 class="f2 red">Score: <span id="ttl-right"> 0 </span> / <span id="ttlcount"> 0 </span></h2>
-   </div>
-   <div class="hangman">
-       <div id="buttons" class="f2">
-       </div>  
-       <p id="catagoryName"></p>
-       <div id="hold">
-       </div>
-       <p id="mylives"></p>
-        <canvas id="stickman">Your Browser does NOT support HTML5 Canvas tag! Please use updated Browser!</canvas>
-       
-   </div>
-   <div id="reset" class="button-1 dib w4 tc">
-    <span>Play again</span>
-  </div>
-  <div id="reset-score" class="button-1 dib w4 tc" onclick="resetScore()">
-    <span>Reset Score</span>
-  </div>
+      <h2 class="f2 green">Using words from word list #24, for the week of 02/11/2019</h2>
+      <h3 class="f3 blue">Use the alphabet below to guess the word </h3>
+      <h2 class="f2 red">Score: <span id="ttl-right"> 0 </span> / <span id="ttlcount"> 0 </span></h2>
+    </div>
+    <div class="hangman">
+      <div id="buttons" class="f2">
+      </div>
+      <p id="catagoryName"></p>
+      <div id="hold">
+      </div>
+      <p id="mylives"></p>
+      <canvas id="stickman">Your Browser does NOT support HTML5 Canvas tag! Please use updated Browser!</canvas>
+
+    </div>
+    <div id="reset" class="button-1 dib w4 tc">
+      <span>Play again</span>
+    </div>
+    <div id="reset-score" class="button-1 dib w4 tc" onclick="resetScore()">
+      <span>Reset Score</span>
+    </div>
   </div>
   <div id="wordSearch" class="tabcontent">
     <h2 class="tc f2 orange">Try your hand at Word Search!!</h2>
     <p class="tc f4 green">Good Luck!!</p>
-    <div id="puzzle-container" class="mw6 mw7-ns mv5 center pa3 ph3-ns">
-      <div class="puzzleWrap">
-        <div id="puzzle"></div>
-        <div id="words">
-          <button id="solve">Solve Puzzle</button>
-        </div>
+    <div id="puzzle-container" class="mw8 mw8-ns mv5 tc center pa3 ph3-ns">
+      <div id="puzzle"></div>
+      <div id="words">
+        <button id="solve">Solve Puzzle</button>
       </div>
     </div>
   </div>
@@ -363,9 +372,10 @@
       <a class="link white-80 hover-green" href="mailto:matthew@mattaz.com">matthew@mattaz.com</a>
     </p>
   </footer>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/hangman.js"></script>
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/wordsearch.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/hangman.js"></script>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/wordsearch.js"></script>
 </body>
+
 </html>
