@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-118247855-5', 'auto');
-		ga('send', 'pageview');
-		</script>
-	<meta name="description" content="Kids website to practice spelling, math, vocabulary, and whatever else they may need "/>
-  <meta name="author" content="Mattaz Web Design"/>
-  <link rel="icon" href="favicon.ico"/>
+    ga('create', 'UA-118247855-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta name="description"
+    content="Kids website to practice spelling, math, vocabulary, and whatever else they may need " />
+  <meta name="author" content="Mattaz Web Design" />
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="assets/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <title>Aiden's School Work</title>
 </head>
+
 <body onload="startLoading()">
   <header id="nav" class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
     <nav id="navbar" class="topnav f6 fw6">
       <a class="link dim white dib mr3" href="index.html" title="Home">Home</a>
       <a class="link dim orange dib mr3" href="math.html" title="About">Math Practice</a>
       <a class="link dim white dib mr3" href="vocabulary.html" title="Store">Vocabulary</a>
-      <a class="link dim white fr dib" href="https://tpes.monroe.k12.tn.us/" target="_blank">Mrs. Chastain's 2nd Grade</a>
+      <a class="link dim white fr dib" href="https://tpes.monroe.k12.tn.us/" target="_blank">T.P.E.S.</a>
       <a href="javascript:void(0);" class="icon" onclick="sideMenu()">
         <i class="fas fa-list orange"></i></a>
     </nav>
@@ -53,11 +58,12 @@
             <p class="f4">Question</p>
             <span id="rndNumber1" class="f4"> - </span> * <span id="rndNumber2" class="f4"> - </span> =
             <p>
-            <input class="br3" type="number" id="userAnswer" name="multiply"/>
-            <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button" onclick="checkAnswer()" value="Check" />
+              <input class="br3" type="number" id="userAnswer" name="multiply" />
+              <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button"
+                onclick="checkAnswer()" value="Check" />
             </p>
             <span id="mesg">Enter your Answer</span>
-            <p>Your Score is: 
+            <p>Your Score is:
               <span id="scoremesg"> 0</span>
             </p>
             <button class="f6 br3 ph3 pv2 dib mid-gray" onclick="startOver()">Start Over</button>
@@ -71,11 +77,12 @@
             <p class="f4">Question</p>
             <span id="rndNumber3" class="f4"> - </span> + <span id="rndNumber4" class="f4"> - </span> =
             <p>
-            <input class="br3" type="number" id="userAnswer-add" name="add"/>
-            <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button" onclick="checkAnswerAdd()" value="Check" />
+              <input class="br3" type="number" id="userAnswer-add" name="add" />
+              <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button"
+                onclick="checkAnswerAdd()" value="Check" />
             </p>
             <span id="mesg-add">Enter your Answer</span>
-            <p>Your Score is: 
+            <p>Your Score is:
               <span id="scoremesg-add"> 0</span>
             </p>
             <button class="f6 br3 ph3 pv2 dib mid-gray" onclick="startOverAdd()">Start Over</button>
@@ -89,11 +96,12 @@
             <p class="f4">Question</p>
             <span id="rndNumber5" class="f4"> - </span> - <span id="rndNumber6" class="f4"> - </span> =
             <p>
-            <input class="br3" type="number" id="userAnswer-sub" name="subtract"/>
-            <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button" onclick="checkAnswerSub()" value="Check" />
+              <input class="br3" type="number" id="userAnswer-sub" name="subtract" />
+              <input class="f6 br3 ph3 pv2 mb2 dib white bg-dark-blue check-button" type="button"
+                onclick="checkAnswerSub()" value="Check" />
             </p>
             <span id="mesg-sub">Enter your Answer</span>
-            <p>Your Score is: 
+            <p>Your Score is:
               <span id="scoremesg-sub"> 0</span>
             </p>
             <button class="f6 br3 ph3 pv2 dib mid-gray" onclick="startOverSub()">Start Over</button>
@@ -108,6 +116,7 @@
       <a class="link white-80 hover-green" href="mailto:matthew@mattaz.com">matthew@mattaz.com</a>
     </p>
   </footer>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
