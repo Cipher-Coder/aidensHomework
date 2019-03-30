@@ -6,7 +6,7 @@
  *     https://github.com/bunkat/wordfind
  */
 
-(function () {
+(function() {
   "use strict";
 
   /**
@@ -23,7 +23,7 @@
    *
    * @api private
    */
-  var WordFind = function () {
+  var WordFind = function() {
     // Letters used to fill blank spots in the puzzle
     var letters = "abcdefghijklmnoprstuvwy";
 
@@ -48,49 +48,49 @@
     // The definition of the orientation, calculates the next square given a
     // starting square (x,y) and distance (i) from that square.
     var orientations = {
-      horizontal: function (x, y, i) {
+      horizontal: function(x, y, i) {
         return {
           x: x + i,
           y: y
         };
       },
-      horizontalBack: function (x, y, i) {
+      horizontalBack: function(x, y, i) {
         return {
           x: x - i,
           y: y
         };
       },
-      vertical: function (x, y, i) {
+      vertical: function(x, y, i) {
         return {
           x: x,
           y: y + i
         };
       },
-      verticalUp: function (x, y, i) {
+      verticalUp: function(x, y, i) {
         return {
           x: x,
           y: y - i
         };
       },
-      diagonal: function (x, y, i) {
+      diagonal: function(x, y, i) {
         return {
           x: x + i,
           y: y + i
         };
       },
-      diagonalBack: function (x, y, i) {
+      diagonalBack: function(x, y, i) {
         return {
           x: x - i,
           y: y + i
         };
       },
-      diagonalUp: function (x, y, i) {
+      diagonalUp: function(x, y, i) {
         return {
           x: x + i,
           y: y - i
         };
       },
-      diagonalUpBack: function (x, y, i) {
+      diagonalUpBack: function(x, y, i) {
         return {
           x: x - i,
           y: y - i
@@ -103,28 +103,28 @@
     // Returns true if the word will fit starting at the square provided using
     // the specified orientation.
     var checkOrientations = {
-      horizontal: function (x, y, h, w, l) {
+      horizontal: function(x, y, h, w, l) {
         return w >= x + l;
       },
-      horizontalBack: function (x, y, h, w, l) {
+      horizontalBack: function(x, y, h, w, l) {
         return x + 1 >= l;
       },
-      vertical: function (x, y, h, w, l) {
+      vertical: function(x, y, h, w, l) {
         return h >= y + l;
       },
-      verticalUp: function (x, y, h, w, l) {
+      verticalUp: function(x, y, h, w, l) {
         return y + 1 >= l;
       },
-      diagonal: function (x, y, h, w, l) {
+      diagonal: function(x, y, h, w, l) {
         return w >= x + l && h >= y + l;
       },
-      diagonalBack: function (x, y, h, w, l) {
+      diagonalBack: function(x, y, h, w, l) {
         return x + 1 >= l && h >= y + l;
       },
-      diagonalUp: function (x, y, h, w, l) {
+      diagonalUp: function(x, y, h, w, l) {
         return w >= x + l && y + 1 >= l;
       },
-      diagonalUpBack: function (x, y, h, w, l) {
+      diagonalUpBack: function(x, y, h, w, l) {
         return x + 1 >= l && y + 1 >= l;
       }
     };
@@ -134,49 +134,49 @@
     // squares that must be checked. Returning {x: x+1, y: y} will always work
     // but will not be optimal.
     var skipOrientations = {
-      horizontal: function (x, y, l) {
+      horizontal: function(x, y, l) {
         return {
           x: 0,
           y: y + 1
         };
       },
-      horizontalBack: function (x, y, l) {
+      horizontalBack: function(x, y, l) {
         return {
           x: l - 1,
           y: y
         };
       },
-      vertical: function (x, y, l) {
+      vertical: function(x, y, l) {
         return {
           x: 0,
           y: y + 100
         };
       },
-      verticalUp: function (x, y, l) {
+      verticalUp: function(x, y, l) {
         return {
           x: 0,
           y: l - 1
         };
       },
-      diagonal: function (x, y, l) {
+      diagonal: function(x, y, l) {
         return {
           x: 0,
           y: y + 1
         };
       },
-      diagonalBack: function (x, y, l) {
+      diagonalBack: function(x, y, l) {
         return {
           x: l - 1,
           y: x >= l - 1 ? y + 1 : y
         };
       },
-      diagonalUp: function (x, y, l) {
+      diagonalUp: function(x, y, l) {
         return {
           x: 0,
           y: y < l - 1 ? l - 1 : y + 1
         };
       },
-      diagonalUpBack: function (x, y, l) {
+      diagonalUpBack: function(x, y, l) {
         return {
           x: l - 1,
           y: x >= l - 1 ? y + 1 : y
@@ -193,12 +193,11 @@
      * @param {[String]} words: The list of words to fit into the puzzle
      * @param {[Options]} options: The options to use when filling the puzzle
      */
-    var fillPuzzle = function (words, options) {
+    var fillPuzzle = function(words, options) {
       var puzzle = [],
         i,
         j,
         len;
-
 
       // initialize the puzzle with blanks
       for (i = 0; i < options.height; i++) {
@@ -231,7 +230,7 @@
      * @param {[Options]} options: The options to use when filling the puzzle
      * @param {String} word: The word to fit into the puzzle.
      */
-    var placeWordInPuzzle = function (puzzle, options, word) {
+    var placeWordInPuzzle = function(puzzle, options, word) {
       // find all of the best locations where this word would fit
       var locations = findBestLocations(puzzle, options, word);
 
@@ -259,7 +258,7 @@
      * @param {[Options]} options: The options to use when filling the puzzle
      * @param {String} word: The word to fit into the puzzle.
      */
-    var findBestLocations = function (puzzle, options, word) {
+    var findBestLocations = function(puzzle, options, word) {
       var locations = [],
         height = options.height,
         width = options.width,
@@ -314,9 +313,9 @@
 
       // finally prune down all of the possible locations we found by
       // only using the ones with the maximum overlap that we calculated
-      return options.preferOverlap ?
-        pruneLocations(locations, maxOverlap) :
-        locations;
+      return options.preferOverlap
+        ? pruneLocations(locations, maxOverlap)
+        : locations;
     };
 
     /**
@@ -332,7 +331,7 @@
      * @param {int} y: The y position to check
      * @param {function} fnGetSquare: Function that returns the next square
      */
-    var calcOverlap = function (word, puzzle, x, y, fnGetSquare) {
+    var calcOverlap = function(word, puzzle, x, y, fnGetSquare) {
       var overlap = 0;
 
       // traverse the squares to determine if the word fits
@@ -367,7 +366,7 @@
      * @param {[Location]} locations: The set of locations to prune
      * @param {int} overlap: The required level of overlap
      */
-    var pruneLocations = function (locations, overlap) {
+    var pruneLocations = function(locations, overlap) {
       var pruned = [];
       for (var i = 0, len = locations.length; i < len; i++) {
         if (locations[i].overlap >= overlap) {
@@ -387,7 +386,7 @@
      * @param {int} y: The y position to check
      * @param {function} fnGetSquare: Function that returns the next square
      */
-    var placeWord = function (puzzle, word, x, y, fnGetSquare) {
+    var placeWord = function(puzzle, word, x, y, fnGetSquare) {
       for (var i = 0, len = word.length; i < len; i++) {
         var next = fnGetSquare(x, y, i);
         puzzle[next.y][next.x] = word[i];
@@ -425,7 +424,7 @@
        * @param {options} settings: The options to use for this puzzle
        * @api public
        */
-      newPuzzle: function (words, settings) {
+      newPuzzle: function(words, settings) {
         var wordList,
           puzzle,
           attempts = 0,
@@ -433,7 +432,7 @@
 
         // copy and sort the words by length, inserting words into the puzzle
         // from longest to shortest works out the best
-        wordList = words.slice(0).sort(function (a, b) {
+        wordList = words.slice(0).sort(function(a, b) {
           return a.length < b.length ? 1 : 0;
         });
 
@@ -444,7 +443,8 @@
           orientations: opts.orientations || allOrientations,
           fillBlanks: opts.fillBlanks !== undefined ? opts.fillBlanks : true,
           maxAttempts: opts.maxAttempts || 3,
-          preferOverlap: opts.preferOverlap !== undefined ? opts.preferOverlap : true
+          preferOverlap:
+            opts.preferOverlap !== undefined ? opts.preferOverlap : true
         };
 
         // add the words to the puzzle
@@ -476,7 +476,7 @@
        * @param {[[String]]} puzzle: The current state of the puzzle
        * @api public
        */
-      fillBlanks: function (puzzle) {
+      fillBlanks: function(puzzle) {
         for (var i = 0, height = puzzle.length; i < height; i++) {
           var row = puzzle[i];
           for (var j = 0, width = row.length; j < width; j++) {
@@ -504,7 +504,7 @@
        * @param {[String]} words: The list of words to find
        * @api public
        */
-      solve: function (puzzle, words) {
+      solve: function(puzzle, words) {
         var options = {
             height: puzzle.length,
             width: puzzle[0].length,
@@ -539,7 +539,7 @@
        * @param {[[String]]} puzzle: The current state of the puzzle
        * @api public
        */
-      print: function (puzzle) {
+      print: function(puzzle) {
         var puzzleString = "";
         for (var i = 0, height = puzzle.length; i < height; i++) {
           var row = puzzle[i];
@@ -569,7 +569,7 @@
  *     https://github.com/bunkat/wordfind
  */
 
-(function (document, $, wordfind) {
+(function(document, $, wordfind) {
   "use strict";
 
   /**
@@ -584,7 +584,7 @@
    *
    * @api private
    */
-  var WordFindGame = function () {
+  var WordFindGame = function() {
     // List of words for this game
     var wordList;
 
@@ -594,7 +594,7 @@
      * @param {String} el: The jQuery element to write the puzzle to
      * @param {[[String]]} puzzle: The puzzle to draw
      */
-    var drawPuzzle = function (el, puzzle) {
+    var drawPuzzle = function(el, puzzle) {
       var output = "";
       // for each row in the puzzle
       for (var i = 0, height = puzzle.length; i < height; i++) {
@@ -621,7 +621,7 @@
      * @param {String} el: The jQuery element to write the words to
      * @param {[String]} words: The words to draw
      */
-    var drawWords = function (el, words) {
+    var drawWords = function(el, words) {
       var output = "<ul>";
       for (var i = 0, len = words.length; i < len; i++) {
         var word = words[i];
@@ -651,7 +651,7 @@
      * to the letter that was selected.
      *
      */
-    var startTurn = function () {
+    var startTurn = function() {
       $(this).addClass("selected");
       startSquare = this;
       selectedSquares.push(this);
@@ -664,7 +664,7 @@
      * of an actual word.
      *
      */
-    var select = function (target) {
+    var select = function(target) {
       // if the user hasn't started a word yet, just return
       if (!startSquare) {
         return;
@@ -733,14 +733,14 @@
       }
     };
 
-    var touchMove = function (e) {
+    var touchMove = function(e) {
       var xPos = e.originalEvent.touches[0].pageX;
       var yPos = e.originalEvent.touches[0].pageY;
       var targetElement = document.elementFromPoint(xPos, yPos);
       select(targetElement);
     };
 
-    var mouseMove = function () {
+    var mouseMove = function() {
       select(this);
     };
 
@@ -749,7 +749,7 @@
      *
      * @param {el} square: The jQuery element that was played
      */
-    var playTurn = function (square) {
+    var playTurn = function(square) {
       // make sure we are still forming a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         if (wordList[i].indexOf(curWord + $(square).text()) === 0) {
@@ -767,7 +767,7 @@
      * resets the game state to start a new word.
      *
      */
-    var endTurn = function () {
+    var endTurn = function() {
       // see if we formed a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         if (wordList[i] === curWord) {
@@ -798,7 +798,7 @@
      * @param {int} x2: The x coordinate of the second point
      * @param {int} y2: The y coordinate of the second point
      */
-    var calcOrientation = function (x1, y1, x2, y2) {
+    var calcOrientation = function(x1, y1, x2, y2) {
       for (var orientation in wordfind.orientations) {
         var nextFn = wordfind.orientations[orientation];
         var nextPos = nextFn(x1, y1, 1);
@@ -822,7 +822,7 @@
        * @param {String} wordsEl: Selector to use when inserting the word list
        * @param {Options} options: WordFind options to use when creating the puzzle
        */
-      create: function (words, puzzleEl, wordsEl, options) {
+      create: function(words, puzzleEl, wordsEl, options) {
         wordList = words.slice(0).sort();
 
         var puzzle = wordfind.newPuzzle(words, options);
@@ -855,7 +855,7 @@
        * @param {[[String]]} puzzle: The puzzle to solve
        * @param {[String]} words: The words to solve for
        */
-      solve: function (puzzle, words) {
+      solve: function(puzzle, words) {
         var solution = wordfind.solve(puzzle, words).found;
 
         for (var i = 0, len = solution.length; i < len; i++) {
@@ -883,12 +883,12 @@
   };
 
   /**
-   * Allow game to be used within the browser
+   
    */
   window.wordfindgame = WordFindGame();
 })(document, jQuery, wordfind);
 
-$(function () {
+$(function() {
   var words = [
     "digit",
     "equal",
@@ -913,7 +913,7 @@ $(function () {
     width: 15,
     fillBlanks: true
   });
-  $("#solve").click(function () {
+  $("#solve").click(function() {
     wordfindgame.solve(gamePuzzle, words);
   });
   // create just a puzzle, without filling in the blanks and print to console
