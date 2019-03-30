@@ -44,6 +44,22 @@
       "diagonalBack",
       "diagonalUpBack"
     ];
+    var standalone = window.navigator.standalone,
+      userAgent = window.navigator.userAgent.toLowerCase(),
+      safari = /safari/.test(userAgent),
+      ios = /iphone|ipod|ipad/.test(userAgent);
+
+    if (ios) {
+      function preventDefault(e) {
+        e.preventDefault();
+      }
+
+      function disableScroll() {
+        document.body.addEventListener("touchmove", preventDefault, {
+          passive: false
+        });
+      }
+    }
 
     // The definition of the orientation, calculates the next square given a
     // starting square (x,y) and distance (i) from that square.
