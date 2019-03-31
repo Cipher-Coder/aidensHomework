@@ -44,6 +44,12 @@
       "diagonalBack",
       "diagonalUpBack"
     ];
+
+    function disableScroll() {
+      document.body.addEventListener("touchmove", preventDefault, {
+        passive: false
+      });
+    }
     var standalone = window.navigator.standalone,
       userAgent = window.navigator.userAgent.toLowerCase(),
       safari = /safari/.test(userAgent),
@@ -52,12 +58,7 @@
     if (ios) {
       function preventDefault(e) {
         e.preventDefault();
-      }
-
-      function disableScroll() {
-        document.body.addEventListener("touchmove", preventDefault, {
-          passive: false
-        });
+        disableScroll();
       }
     }
 
