@@ -45,21 +45,23 @@
       "diagonalUpBack"
     ];
 
+    // Disable scroll and bounce on ios
+
     function disableScroll() {
       document.body.addEventListener("touchmove", preventDefault, {
         passive: false
       });
     }
-    var standalone = window.navigator.standalone,
-      userAgent = window.navigator.userAgent.toLowerCase(),
-      safari = /safari/.test(userAgent),
-      ios = /iphone|ipod|ipad/.test(userAgent);
+    function enableScroll() {
+      document.body.removeEventListener("touchmove", preventDefault, {
+        passive: false
+      });
+    }
 
-    if (ios) {
-      function preventDefault(e) {
-        e.preventDefault();
-        disableScroll();
-      }
+    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+    var is_iPhone = navigator.userAgent.match(/iPhone/i) != null;
+    if (is_iPad || is_iPhone == true) {
+      disableScroll();
     }
 
     // The definition of the orientation, calculates the next square given a
