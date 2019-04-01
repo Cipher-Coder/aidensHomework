@@ -255,6 +255,7 @@ canvas {
   background: #306a8b;
   border-radius: 25px;
   margin-bottom: 200px;
+  touch-action: none;
 }
 
 #puzzle {
@@ -356,4 +357,17 @@ button::-moz-focus-inner {
 
 footer {
   position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+  #puzzle-container {
+    display: grid;
+    text-align: center;
+  }
+  #puzzle {
+    grid-column: 1 / span 8;
+  }
+  #words {
+    grid-column: 2 / span 3;
+  }
 }
