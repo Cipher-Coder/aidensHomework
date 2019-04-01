@@ -256,6 +256,7 @@ canvas {
   border-radius: 25px;
   margin-bottom: 200px;
   touch-action: none;
+  pointer-events: auto;
 }
 
 #puzzle {
