@@ -45,25 +45,6 @@
       "diagonalUpBack"
     ];
 
-    // Disable scroll and bounce on ios
-
-    function disableScroll() {
-      document.body.addEventListener("touchmove", preventDefault, {
-        passive: false
-      });
-    }
-    function enableScroll() {
-      document.body.removeEventListener("touchmove", preventDefault, {
-        passive: false
-      });
-    }
-
-    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    var is_iPhone = navigator.userAgent.match(/iPhone/i) != null;
-    if (is_iPad || is_iPhone == true) {
-      disableScroll();
-    }
-
     // The definition of the orientation, calculates the next square given a
     // starting square (x,y) and distance (i) from that square.
     var orientations = {
