@@ -142,11 +142,7 @@ function disableScroll() {
     passive: false
   });
 }
-function enableScroll() {
-  document.body.removeEventListener("touchmove", preventDefault, {
-    passive: false
-  });
-}
+
 function detectIos() {
   var is_iPad = navigator.userAgent.match(/iPad/i) != null;
   var is_iPhone = navigator.userAgent.match(/iPhone/i) != null;
