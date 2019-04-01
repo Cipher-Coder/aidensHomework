@@ -369,5 +369,6 @@ footer {
   }
   #words {
     grid-column: 2 / span 3;
+    color: black;
   }
 }
