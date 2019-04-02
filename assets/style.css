@@ -72,8 +72,12 @@ body {
 }
 
 .check-button {
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   opacity: 1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -95,6 +99,8 @@ body {
 
 .tab a {
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   outline: none;
   border: none;
@@ -161,6 +167,8 @@ canvas {
   background: #fff;
   border: solid 1px #fff;
   color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -183,16 +191,16 @@ canvas {
 .activeselect {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  -moz-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   cursor: default;
 }
 .activeselect:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  -moz-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -203,8 +211,13 @@ canvas {
 }
 
 .button-1 {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 40px;
   padding: 0 14px;
@@ -224,12 +237,20 @@ canvas {
   bottom: 0;
   width: 100%;
   height: 100%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   background: #5778f3;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .button-1:hover::before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -250,11 +271,17 @@ canvas {
 }
 
 #puzzle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   background: #306a8b;
   border-radius: 25px;
   margin-bottom: 200px;
+  -ms-touch-action: none;
   touch-action: none;
 }
 
@@ -349,6 +376,8 @@ button::-moz-focus-inner {
   border: 2px solid #ee5426;
   border-radius: 25px;
   opacity: 0.5;
+  -webkit-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in;
 }
 #solve:hover,
@@ -362,7 +391,12 @@ footer {
 
 @media only screen and (max-width: 900px) {
   #puzzle-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
   }
