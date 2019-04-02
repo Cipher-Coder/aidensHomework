@@ -266,9 +266,9 @@ canvas {
   width: 60%;
 }
 
-#puzzle div {
+#puzzle > div {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* style for each square in the puzzle */
@@ -362,14 +362,15 @@ footer {
 
 @media only screen and (max-width: 900px) {
   #puzzle-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
   #puzzle {
-    grid-column: 1 / span 8;
+    width: 100%;
+    margin: 0;
   }
   #words {
-    grid-column: 2 / span 3;
     color: black;
   }
 }

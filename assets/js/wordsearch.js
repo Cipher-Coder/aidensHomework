@@ -734,8 +734,10 @@
     };
 
     var touchMove = function(e) {
-      var xPos = e.originalEvent.touches[0].pageX;
-      var yPos = e.originalEvent.touches[0].pageY;
+      var touch =
+        e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+      var xPos = touch.clientX;
+      var yPos = touch.clientY;
       var targetElement = document.elementFromPoint(xPos, yPos);
       select(targetElement);
     };
