@@ -262,6 +262,7 @@ canvas {
   float: left;
   margin: 30px 20px;
   width: 60%;
+  touch-action: none;
 }
 
 #puzzle > div {
