@@ -281,8 +281,8 @@ canvas {
   background: #306a8b;
   border-radius: 25px;
   margin-bottom: 200px;
-  -ms-touch-action: none;
-  touch-action: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 #puzzle {
