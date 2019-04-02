@@ -255,6 +255,7 @@ canvas {
   background: #306a8b;
   border-radius: 25px;
   margin-bottom: 200px;
+  touch-action: none;
 }
 
 #puzzle {
@@ -262,7 +263,6 @@ canvas {
   float: left;
   margin: 30px 20px;
   width: 60%;
-  touch-action: none;
 }
 
 #puzzle > div {
