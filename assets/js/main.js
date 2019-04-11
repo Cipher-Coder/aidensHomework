@@ -131,3 +131,6 @@ function openName(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+const getYear = document.getElementById("copyYear");
+getYear.textContent = new Date().getFullYear();
