@@ -292,3 +292,6 @@ function resetScore() {
   document.getElementById("ttl-right").innerHTML = numRight;
   count1.innerHTML = numPlayed;
 }
+
+// Sets default tab open for vocab page
+document.getElementById("defaultOpen").click();

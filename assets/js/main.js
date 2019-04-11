@@ -131,6 +131,3 @@ function openName(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-// Default tab to be open
-document.getElementById("defaultOpen").click();
