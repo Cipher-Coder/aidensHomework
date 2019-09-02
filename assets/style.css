@@ -26,6 +26,12 @@ body {
   margin-top: -32px;
 }
 
+.containerBottomNav {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -79,6 +85,7 @@ body {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .check-button:hover {
@@ -307,6 +314,10 @@ canvas {
   outline: none;
   font: 1em sans-serif;
   color: #96acbb;
+}
+
+button {
+  cursor: pointer;
 }
 
 button::-moz-focus-inner {
